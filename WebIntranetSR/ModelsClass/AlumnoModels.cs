@@ -101,10 +101,9 @@ namespace WebIntranetSR.ModelsClass
                     "<td>" + item.Edad + "</td>" +
                     "<td>" + item.Direccion + "</td>" +
                     "<td>" + item.Ubigeo + "</td>" +
-                    //"<td>" + item.Ubigeo + "</td>" +
                     "<td>" + Estado + "  </td>" + 
-                    "<td>" + "<a  data-toggle='modal'  data-target='#myModal'  class='btn btn-success'>Edit</a>" + "</td>" +
-                    "<td>" + "<a  data-toggle='modal'  data-target='#myModal3'  class='btn btn-danger'  >Delete</a>" + "</td>" + 
+                    "<td>" + "<a class='btn btn-success' href='#'>Edit</a>" + "</td>" +
+                    "<td>" + "<a class='btn btn-danger' href='#' >Delete</a>" + "</td>" + 
                     "</tr>";
             }
             object[] dataObj = { dataFilter, paginador };

@@ -1,9 +1,8 @@
-﻿@model WebIntranetSR.Models.Alumno
+﻿@model IEnumerable<WebIntranetSR.Models.Alumno>
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar alumno";
 }
-
 <h2>Edit</h2>
 
 <h4>Alumno</h4>
@@ -70,10 +69,3 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
