@@ -1,4 +1,10 @@
-﻿// Write your JavaScript code.
+﻿
+$(document).ready(()=> {
+    document.getElementById("filtrar").focus();
+    filtrarDatos(1);
+});
+
+// Write your JavaScript code.
 $('#modalEditar').on('shown.bs.modal', function () {
     $('#myInput').focus()
 })
@@ -9,6 +15,7 @@ $('#modalAalumno').on('shown.bs.modal', function () {
 
 function getUsuario(id, action)
 {
+    console.log('getUsuario');
     $.ajax({
         type: "POST",
         url: action,
@@ -228,14 +235,7 @@ function crearUsuario(action) {
 
 }
 
-$().ready(()=> {
-    document.getElementById("filtrar").focus();
-    filtrarDatos(1);
 
-});
-
-
-///sadasdasdasdasdasdasdasdasdsad
 var agregarAlumno = () =>
 {
     var nombre = document.getElementById("Nombre").value;
@@ -267,21 +267,18 @@ var filtrarDatos = (numPagina) =>
     var valor = document.getElementById("filtrar").value;
     var action = 'Alumnoes/filtrarDatos';
     var alumno = new Alumno('nombre', 
-                            'apellPa', 
-                            'apellMa', 
-                            'dni', 
-                            'grado', 
-                            'seccion',
-                            'edad', 
-                            'direccion', 
-                            'ubigeo', 
-                            'estado', 
-                            action);
+    'apellPa', 
+    'apellMa', 
+    'dni', 
+    'grado', 
+    'seccion',
+    'edad', 
+    'direccion', 
+    'ubigeo', 
+    'estado', 
+    action);
     console.log('Objeto:  ' + Object.values(alumno));
-    
     alumno.filtrarDatos(numPagina);
-    //alumno.saludo();
-
 }
 
 

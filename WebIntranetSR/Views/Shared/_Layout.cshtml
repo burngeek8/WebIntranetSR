@@ -6,7 +6,8 @@
     <title>@ViewData["Title"] - WebIntranetSR</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
@@ -17,31 +18,14 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
-                    <img src="~/images/logo.png"  width="30" height="30"  class="d-inline-block align-top" style="display: inline-block">
-                     San Rafael
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <!--
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">Nosotros</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contactanos</a></li>
-                    <li><a asp-area="" asp-controller="Alumnoes" asp-action="Index">Alumnos</a></li>
-                    -->
-                </ul>
-                @await Html.PartialAsync("_LoginPartial")
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" >
+            <img src="~/images/logo.png"  width="30" height="30"  class="d-inline-block align-top" style="display: inline-block">
+                San Rafael
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   
+            @await Html.PartialAsync("_LoginPartial")
         </div>
     </nav>
     <div class="container body-content">
@@ -54,7 +38,8 @@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="~/js/Alumno.js" asp-append-version="true"></script>
         <script src="~/js/AlumnoOF.js" asp-append-version="true"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>

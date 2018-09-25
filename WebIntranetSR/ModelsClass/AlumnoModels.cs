@@ -68,10 +68,7 @@ namespace WebIntranetSR.ModelsClass
 
             if(valor == "null")
             {
-
                 query = alumno.Skip(inicio).Take(reg_por_pagina);
-
-
             }
             else
             {
@@ -89,7 +86,7 @@ namespace WebIntranetSR.ModelsClass
                 }
                 else
                 {
-                    Estado = "<a class ='btn btn-success'>No Activo</a>";
+                    Estado = "<a class ='btn btn-success' href='Alumnoes/Validate'>No Activo</a>";
 
                 }
 
@@ -104,10 +101,10 @@ namespace WebIntranetSR.ModelsClass
                     "<td>" + item.Edad + "</td>" +
                     "<td>" + item.Direccion + "</td>" +
                     "<td>" + item.Ubigeo + "</td>" +
-                    "<td>" + item.Ubigeo + "</td>" +
+                    //"<td>" + item.Ubigeo + "</td>" +
                     "<td>" + Estado + "  </td>" + 
-                    "<td>" + "<a  data-toggle='modal'  data-target='#myModal'  class='btn  btn-success'>Edit</a>|" + 
-                    "<a  data-toggle='modal'  data-target='#myModal3'  class='btnbtn-danger'  >Delete</a>" + "</td>" + 
+                    "<td>" + "<a  data-toggle='modal'  data-target='#myModal'  class='btn btn-success'>Edit</a>" + "</td>" +
+                    "<td>" + "<a  data-toggle='modal'  data-target='#myModal3'  class='btn btn-danger'  >Delete</a>" + "</td>" + 
                     "</tr>";
             }
             object[] dataObj = { dataFilter, paginador };

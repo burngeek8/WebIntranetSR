@@ -23,6 +23,14 @@ namespace WebIntranetSR.Controllers
             _context = context;
             alumnoModels = new AlumnoModels(_context);
         }
+        public IActionResult Validate()
+        {
+            return View();
+        }
+        public IActionResult Validar()
+        {
+            return View();
+        }
 
         // GET: Alumnoes
         public async Task<IActionResult> Index()
@@ -37,11 +45,8 @@ namespace WebIntranetSR.Controllers
             return alumnoModels.filtrarDatos(numPagina, valor);
 
         }
-
-
-
-            // GET: Alumnoes/Details/5
-            public async Task<IActionResult> Details(int? id)
+        // GET: Alumnoes/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
@@ -66,15 +71,7 @@ namespace WebIntranetSR.Controllers
            return alumnoModels.guardarAlumno(nombre, apellPa, apellMa,
                 dni, grado, seccion, edad, direccion, ubigeo,
                 estado);
-
-
         }
-
-
-        
-
-
-
         // GET: Alumnoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
